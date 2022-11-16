@@ -15,10 +15,9 @@ const Footer = () => {
     }
 
     return (
-        <div className="flex flex-col bg-frameColor justify-start py-10 px-24 min-[352px]:overflow-x-hidden max-[1024px]:overflow-x-auto">
-            <div className="flex flex-row w-full mx-[auto]  pt-[20px] gap-16">
-
-                <div className="w-[60%]">
+        <div className="flex flex-row sm:flex-col bg-frameColor justify-start py-10 px-24 ">
+            <div className="flex lg:flex-row sm:flex-col w-full mx-[auto]  pt-[20px] gap-16">
+                <div className="4xl:w-[60%] sm:w-[100%]">
                     <h1 className="text-[18px] font-bold text-white">About Token Ticket</h1>
                     <h1 className="text-xl font-base text-white text-left pt-5">
                         Urna euismod id ut nisl auctor dignissim integer quis euismod. Iaculis faucibus
@@ -27,8 +26,8 @@ const Footer = () => {
                         blandit proin adipiscing amet, nulla urna.
                     </h1>
                 </div>
-                <div className="flex flex-row w-[30%]">
-                    <div className="w-[50%]">
+                <div className="flex flex-row 4xl:w-[30%] sm:w-[100%]">
+                    <div className="sm:w-[60%] md:w-[50%]">
                         <h1 className="text-[18px] font-bold text-white">Follow Us</h1>
                         <ul className="flex flex-initial text-3xl text-white gap-9 mt-4">
 
@@ -38,7 +37,7 @@ const Footer = () => {
 
                         </ul >
                     </div>
-                    <div className="w-[50%]">
+                    <div className="sm:w-[40%] md:w-[50%]">
                         <h1 className="text-[18px] font-bold text-white">Partner</h1>
                         <a href="https://baliola.com"><img src={BaliolaLogo} alt="" className="w-10 h-10 rounded-full mt-3" /></a>
                     </div>
@@ -46,8 +45,8 @@ const Footer = () => {
             </div>
 
 
-            <div className="w-full   h-[2px] bg-base-60 mx-[auto] mt-[20px]"></div>
-            <ul className=" text-xl flex justify-center  list-none flex-row  items-center flex-initial w-full py-5 text-white gap-[100px] font-medium">
+            <div className="w-full  h-[2px] bg-base-60 mx-[auto] mt-[20px]"></div>
+            <ul className=" text-xl sm:invisible lg:visible flex justify-center  list-none flex-row  items-center flex-initial w-full sm:py-2 lg:py-5 xlg:py-10 text-white lg:gap-[80px]  xlg:gap-[100px] font-medium">
                 {[
                     <a href="/ticket">My Ticket</a>,
                     <a href="/favourite">Favourite</a>,

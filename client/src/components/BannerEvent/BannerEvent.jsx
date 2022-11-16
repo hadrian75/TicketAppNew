@@ -15,7 +15,7 @@ import bannerImg from "../../../bannerComponent/right/bannerImg.svg"
 
 const BannerEvent = () => {
     return (
-        <div className="font-Montserrat my-32 w-[70%] flex h-[400px] bg-frameColor relative overflow-hidden">
+        <div className="font-Montserrat  w-[1100px]   flex h-[400px] bg-frameColor relative overflow-hidden ">
             <div className="relative left-[45px] z-50 flex w-[40%] items-center">
                 <div className=" h-[70%] w-[60%] ">
                     <h1 className="text-white text-[21px] font-semibold font-Montserrat">Limited Time Offer</h1>

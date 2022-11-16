@@ -19,7 +19,7 @@ const EventsCard = () => {
 
 
     return (
-        <div className='flex- flex-col justify-center  relative overflow-y-auto overflow-x-hidden h-[672px] w-6/8'>
+        <div className='flex- flex-col justify-center  relative overflow-y-auto overflow-x-hidden h-[672px] w-auto '>
 
             {
                 eventCard && eventCard.map((eventsCards) => {

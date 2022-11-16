@@ -20,11 +20,16 @@ module.exports = {
       },
     ],
   },
-  screens: {
-   'x-sm': '352px',
-  },
   theme: {
+
+
     extend: {
+      screens:{
+        'sm':'360px',
+        'xsm':'480px',
+        'xlg': '1100px'
+
+      },
       fontFamily:{
          'manrope': ['Manrope', 'sans-serif'],
          'kanit': ['Kanit', 'sans-serif'],

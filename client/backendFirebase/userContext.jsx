@@ -20,20 +20,7 @@ export const userContextProvider = ({ children }) => {
         return unsubscribe
     }, [])
 
-    const userRegist = (username, email, password, confirmpassword, number) => {
-        setLoading(true)
-        createUserWithEmailAndPassword(auth, email, password)
-            .then(() => {
-                updateProfile(auth.currentUser, {
-                    displayName: username,
-                    displayEmail: email,
-                    displayNumber: number
-                });
-            })
-            .then((response) => console.log(response))
-            .catch((error) => setError(error.message))
-            .finally(() => setLoading(false))
-    }
+
 
     const userSign = (email, password) => {
         setLoading(true)
@@ -43,14 +30,14 @@ export const userContextProvider = ({ children }) => {
             .finally(() => setLoading(false))
     }
 
-    const userLogout = () => {
-        signOut(auth)
-    }
 
     const userForgot = (email) => {
         return sendPasswordResetEmail(auth, email)
     }
 
+    const userLogout = () => {
+        signOut(auth)
+    }
     const contextValue = {
         user,
         loading,

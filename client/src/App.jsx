@@ -6,6 +6,7 @@ import { Routes, Route, Link, Router } from "react-router-dom";
 import ProfileScreen from './components/ProfileScreen';
 // import { useUserContext } from '../backend/userContext';
 import { Suspense } from 'react';
+import AdminPanel from './components/adminPanel/AdminPanel';
 
 const App = () => {
   // const { loading, error, user } = useUserContext()
@@ -21,6 +22,7 @@ const App = () => {
         <Route path='/resetpass' element={<Resetpass />} />
         <Route path='/events' element={<Events />} />
         <Route path='/profile' element={<ProfileScreen />} />
+        <Route path='/admin' element={<AdminPanel />} />
         <Route path='/verification' element={<Verification />} />
         <Route path='/events/:eventsId' element={<EventsDetail />} />
         <Route path='/history/:historyId' element={<EventsDetail />} />
