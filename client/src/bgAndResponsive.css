@@ -1,0 +1,60 @@
+:root{
+    --primary-color : #011F4B;
+    --primary-color-80 : rgba(4, 38, 81, 0.8);
+    --primary-color-60 : rgba(4, 38, 81, 0.6);
+    --primary-color-40 : rgba(4, 38, 81, 0.4);
+    --second-color : #1E90FF;
+    --second-color-80 : rgba(30, 144, 255, 0.8);
+    --second-color-60 : rgba(30, 144, 255, 0.6);
+    --second-color-40 : rgba(30, 144, 255, 0.4);
+    --dark-color : #111111;
+}
+
+.navbar-section{
+    justify-content: space-between;
+}
+
+.homepage-section, .navbar-section{
+     padding-left: 7rem;
+     padding-right: 7rem;
+}
+
+.loginSection{
+    padding-left: 10rem;
+     padding-right: 10rem;
+}
+
+#inputSign input::placeholder{
+    color: #787878;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.outlineBanner{
+    text-shadow: #434343 -2px 0.2px 1px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+/* Carrousel */
+
+
+
+
+.wrapperBanner{
+    width: 100%;
+    max-width: 100%;
+    height: 600px;
+    overflow-x: scroll;
+    overflow-y: hidden; 
+    white-space: nowrap;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 90px;
+}
+
+::-webkit-scrollbar
+{
+    display: none;
+}

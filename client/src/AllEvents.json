@@ -1,0 +1,15 @@
+[
+    {
+        "id": 1,
+        "title": "Event NFT",
+        "nftPhoto": "https://i.pinimg.com/564x/59/2a/21/592a21033c32f4e1778a45aceb461048.jpg",
+        "time": "22 November",
+        "isOnline": false,
+        "price": 2,
+        "description": "Lorem Ipsum",
+        "location": {
+            "Province": "Sumbawa",
+            "City": "Taliwang"
+        }
+    }
+]
