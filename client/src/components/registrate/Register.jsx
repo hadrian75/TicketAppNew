@@ -132,7 +132,7 @@ const Register = () => {
                                     toggleAlert === false ?
                                         <span className='flex items-center gap-3'>
                                             <Dismiss20Filled className='rounded-full bg-error text-frameColor  px-1' />
-                                            <h1 className='text-error'>At Least 8 Characters</h1>
+                                            <h1 className='text-error text-[14px]'>At Least 8 Characters</h1>
                                         </span>
                                         :
                                         <span className='flex items-center gap-3'>
@@ -143,7 +143,7 @@ const Register = () => {
                                 }
                             </div>
 
-                            {/* <label htmlFor='confirmPass' className='text-[16px] text-white font-medium pb-2'>Confirm Password</label>
+                            <label htmlFor='confirmPass' className='text-[16px] text-white font-medium pb-2'>Confirm Password</label>
                             <div className='relative w-full flex items-center'>
 
                                 <LockClosed24Regular className=" absolute ml-4 " primaryFill='white' />
@@ -157,7 +157,7 @@ const Register = () => {
                                 </span>
 
 
-                            </div> */}
+                            </div>
                             <div>
 
                                 <button type={`submit`} className="w-full bg-primary h-[48px] rounded-xl mt-5 text-[16px] text-white cursor-pointer" >Submit</button>

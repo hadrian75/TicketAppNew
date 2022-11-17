@@ -97,7 +97,7 @@ const Login = () => {
                                     <input type="email" id="EmailInput" handleChange={() => handleEmail()} className="block p-4 w-full rounded-xl  border-2 text-[16px]  bg-frameColor caret-white placeholder:text-white pl-12 text-white focus:outline-none h-[4rem] font-light" placeholder="Enter Your Email..." pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$" required />
                                 </div>
                             </div>
-                            <div className=' w-[100%] pt-12' method="">
+                            <div className=' w-[100%] pt-5' method="">
                                 <label className="text-xl my-2 text-white">Password</label>
                                 <div className="relative flex items-center">
                                     <LockClosed24Regular className="absolute ml-3" primaryFill="white" />

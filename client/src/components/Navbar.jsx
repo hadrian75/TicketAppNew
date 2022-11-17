@@ -3,7 +3,7 @@ import { HiMenu, HiMenuAlt4 } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
 import { RiAncientGateFill } from "react-icons/ri";
 import logo from '../../Icon/logo.svg'
-import { Person24Regular, Alert24Regular, Wallet24Regular, } from "@fluentui/react-icons";
+import { Person24Regular, Alert24Regular, Wallet24Regular, Person20Regular, Alert20Regular, Wallet20Regular } from "@fluentui/react-icons";
 import '../bgAndResponsive.css'
 
 
@@ -20,12 +20,12 @@ const Navbar = () => {
 
 
   return (
-    <nav className="w-full flex bg-frameColor py-8 md:justify-between sm:justify-around   sm:z-[60] md:relative">
-      <div className="sm:flex  flex-initial justify-center cursor-pointer pr-10 basis-1/4">
+    <nav className="w-full flex bg-frameColor py-8  sm:justify-center xsm:justify-between   sm:z-[60] md:relative">
+      <div className="sm:flex  flex-initial justify-center cursor-pointer pr-10 ">
         <a href="/" className="text-2xl text-white font-semibold">
           <span className="flex items-center justify-center lg:gap-2 w-[200px]">
             <img src={logo} alt="" className="w-16 -translate-y-1" />
-            <h1 className="text-white text-[16px]">Token Ticket</h1>
+            <h1 className="text-white text-[16px] sm:ml-5">Token Ticket</h1>
           </span>
         </a>
       </div>
@@ -36,37 +36,33 @@ const Navbar = () => {
           <a href="/history" className=" mx-10 text-[16px]">History Transaction</a>,
           <a href="/events" className="mx-8 text-[16px]">Events</a>,
           <div className="flex justify-center ml-7 ">
-            <a href="/profile" className="text-white text-3xl px-7 "><Person24Regular /></a>
-            <a href="" className="text-white text-3xl px-7" ><Alert24Regular /></a>
-            <a href="" className="text-white text-3xl px-7" >< Wallet24Regular /></a>
+            <a href="/profile" className="text-white text-[14px] px-7 "><Person24Regular /></a>
+            <a href="" className="text-white text-[14px] px-7" ><Alert24Regular /></a>
+            <a href="" className="text-white text-[14px] px-7" >< Wallet24Regular /></a>
           </div>,
         ].map((items, index) => (
           <NavbarItem key={items + index} title={items} />
         ))}
       </ul>
-      <div className="flex relative items-center ">
+      <div className="flex relative items-center">
         <a href="/ticket" className="font-light text-[16px] xlg:hidden mr-5 text-white">Home</a>
         <a href="/events" className="font-light sm:text-[16px] xlg:hidden mr-5 text-white">Events</a>
 
-        {toggleMenu
-          ? <AiOutlineClose fontSize={28} className="xlg:hidden text-white cursor-pointer mr-10" onClick={() => setToggleMenu(false)} />
-          : <HiMenuAlt4 fontSize={28} className="xlg:hidden cursor-pointer text-white mr-10" onClick={() => setToggleMenu(true)} />
-        }
-        {toggleMenu && (
-          <ul className="z-[60] fixed top-0 right-0 p-3 w-[40vw] h-screen shadow-2xl xlg:hidden list-none flex flex-col justify-start items-end blue-glassmorphism animate-slide-in  ">
 
-            <li className="text-xl text-black w-full my-2">
-              <AiOutlineClose onClick={() => setToggleMenu(false)} className=" text-white cursor-pointer" fontSize={20} />
-            </li>
+        <HiMenuAlt4 fontSize={28} className="xlg:hidden cursor-pointer text-white mr-10" onClick={() => setToggleMenu(!toggleMenu)} />
+
+        {toggleMenu && (
+          <ul className="z-[60] absolute top-24 right-0  pr-5 sm:w-[160px] h-[350px] shadow-2xl xlg:hidden list-none flex flex-col justify-start items-end bg-frameColor animate-slide-in  ">
             {[
-              <div className="flex justify-center">
-                <a href="" className="text-white text-3xl px-6" ><Alert24Regular /></a>
-                <a href="" className="text-white text-3xl px-6" >< Wallet24Regular /></a>
-                <a href="" className="text-white text-3xl pl-6"><Person24Regular /></a>
-              </div>,
+
               <a href="/ticket" className="font-light  text-white">My Ticket</a>,
               <a href="/favourite" className="font-light  text-white">Favourite</a>,
               <a href="/history" className="font-light  text-white">History Transaction</a>,
+              <div className="flex justify-center">
+                <a href="" className="text-white text-[14px] px-6" ><Alert20Regular /></a>
+                <a href="" className="text-white text-[14px] px-6" >< Wallet20Regular /></a>
+                <a href="" className="text-white text-[14px] pl-6"><Person20Regular /></a>
+              </div>,
             ].map((item, index) => (<NavbarItem key={item + index} title={item} classProps="my-8 pt-2 text-xl" classHidden={'pointer-event-none'} />
             ))}
           </ul>

@@ -7,6 +7,9 @@ import ProfileScreen from './components/ProfileScreen';
 // import { useUserContext } from '../backend/userContext';
 import { Suspense } from 'react';
 import AdminPanel from './components/adminPanel/AdminPanel';
+import AddEvent from './components/adminPanel/Events/addEvent';
+import EditEvent from './components/adminPanel/Events/EditEvent/EditEvent';
+import EditEventById from './components/adminPanel/Events/EditEvent/EditEventById';
 
 const App = () => {
   // const { loading, error, user } = useUserContext()
@@ -22,9 +25,13 @@ const App = () => {
         <Route path='/resetpass' element={<Resetpass />} />
         <Route path='/events' element={<Events />} />
         <Route path='/profile' element={<ProfileScreen />} />
-        <Route path='/admin' element={<AdminPanel />} />
+        <Route path='/admin' element={<AdminPanel />}>
+          <Route path='/admin/addEvent' element={<AddEvent />} />
+          <Route path='/admin/editEvent' element={<EditEvent />} />
+          <Route path='/admin/editEvent/:eventId' element={<EditEventById />} />
+        </Route>
         <Route path='/verification' element={<Verification />} />
-        <Route path='/events/:eventsId' element={<EventsDetail />} />
+        <Route path='/events/:eventId' element={<EventsDetail />} />
         <Route path='/history/:historyId' element={<EventsDetail />} />
         <Route path='*' element={<UndefinedPath />} />
       </Routes>

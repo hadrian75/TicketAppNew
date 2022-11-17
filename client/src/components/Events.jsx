@@ -4,13 +4,13 @@ import axios from 'axios'
 
 const Events = () => {
     return (
-        <>
+        <div className=' overflow-hidden'>
             <Navbar />
             <div className='flex'>
                 <Filter />
             </div>
             <Footer />
-        </>
+        </div>
     )
 }
 
