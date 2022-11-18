@@ -2,13 +2,12 @@ import eventCard from '../AllEvents.json'
 import { CalendarLtr20Filled, Location20Filled, TicketHorizontal20Filled } from '@fluentui/react-icons'
 import avaxIcon from '../../images/avaxIcon.svg'
 import { Link } from "react-router-dom";
-const Cards = () => {
+const CardsFav = () => {
     return (
-<<<<<<< HEAD
-        <div className='flex flex-col justify-center m-10 relative overflow-y-auto overflow-x-hidden h-[672px] w-6/8'>
+        <div className='flex- flex-col justify-center m-10 relative overflow-y-auto overflow-x-hidden h-[672px] w-6/8'>
             {eventCard && eventCard.map(eventCards => {
                 return (
-                    <div className='w-full h-[18rem] flex flex-row justify-center m-8  relative' key={eventCards.id}>
+                    <div className='w-full h-[16rem] flex flex-row justify-center m-8  relative' key={eventCards.id}>
                         <img src={eventCards.nftPhoto} alt="NFT Photo" className='w-[40%] object-cover rounded-bl-lg rounded-tl-lg bg-frameColor' />
                         <div id="description" className='pl-[43px] w-[50%] rounded-br-lg rounded-tr-lg flex flex-col justify-center bg-frameColor'>
                             <span className='flex flex-row justify-between'>
@@ -16,19 +15,15 @@ const Cards = () => {
                                 {eventCards.status === false
                                     ?
                                     <span className='flex flex-row pt-[30px]'>
-                                        <h2 className='mr-[17px] text-[16px] font-normal text-white'>Status:</h2>
+                                        <h2 className='mr-[17px] text-[16px] font-normal text-white'>Event:</h2>
                                         <div className='mr-[34px] bg-error w-[20px] h-[20px] rounded-full'></div>
                                     </span>
                                     :
                                     <span className='flex flex-row pt-[30px]'>
-                                        <h2 className='mr-[17px] text-[16px] font-normal text-white'>Status:</h2>
+                                        <h2 className='mr-[17px] text-[16px] font-normal text-white'>Event:</h2>
                                         <div className='mr-[34px] bg-success w-[20px] h-[20px] rounded-full'></div>
                                     </span>
                                 }
-                            </span>
-                            <span className='flex flex-row pb-[15px] items-center'>
-                                <TicketHorizontal20Filled primaryFill='white' />
-                                <h1 className='pl-4 font-normal text-[16px] text-white'>{eventCards.type}</h1>
                             </span>
                             <span className='flex flex-row pb-[15px] items-center'>
                                 <CalendarLtr20Filled primaryFill='white' />
@@ -38,9 +33,6 @@ const Cards = () => {
                                 <Location20Filled primaryFill='white' />
                                 <h1 className='pl-4 font-normal text-[16px] text-white'>{eventCards.location.Province}, {eventCards.location.City}</h1>
                             </span>
-=======
-        <div className='flex- flex-col justify-center  relative overflow-y-auto overflow-x-hidden h-[672px] w-auto '>
->>>>>>> 6339329274fde48f4f58f3da75c96febf834f9d2
 
                             {eventCards.isOnline === false
                                 ?
@@ -55,8 +47,14 @@ const Cards = () => {
                                 </span>
                             }
                             <div className='relative'>
-                                <span className='flex absolute right-[32px] -translate-y-24 items-center text-[16px] font-normal'>
-                                    <Link to={`/ticket/${eventCards.id}`} className="bg-primary text-white px-7 py-4 rounded-xl">Detail Ticket</Link>
+                                <span className='flex absolute right-[220px] -translate-y-16 items-center text-[16px] font-normal'>
+                                    <img src={avaxIcon} alt="" className='w-[20px] h-[20px]' />
+                                    <h1 className='pl-4 text-[16px] text-white'>{eventCards.price} {eventCards.token}</h1>
+                                </span>
+                            </div>
+                            <div className='relative'>
+                                <span className='flex absolute right-[32px] -translate-y-20 items-center text-[16px] font-normal'>
+                                    <Link to={`/events/${eventCards.id}`} className="bg-primary text-white px-7 py-4 rounded-xl">Detail Event</Link>
                                 </span>
                             </div>
                         </div>
@@ -66,4 +64,4 @@ const Cards = () => {
         </div>
     )
 }
-export default Cards;
+export default CardsFav;
