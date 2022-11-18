@@ -4,6 +4,7 @@ import { Navbar, Footer } from '../'
 import { Outlet } from 'react-router-dom'
 const AdminPanel = () => {
     const [drop, setDrop] = useState(false)
+
     return (
         <div>
             <Navbar />
@@ -71,7 +72,6 @@ const AdminPanel = () => {
                     </div>
                 </aside>
                 <Outlet />
-
             </div>
             <Footer />
         </div>
@@ -80,4 +80,3 @@ const AdminPanel = () => {
 export default AdminPanel
 
 
-// flex - shrink - 0 w - 6 h - 6 text - white transition duration - 75  group - hover: text - white dark: group - hover: text - white
