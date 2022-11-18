@@ -14,7 +14,7 @@ const EventsDetail = () => {
     const [url, setUrl] = useState("")
     useEffect(() => {
         getProductById()
-        console.log(id)
+        console.log(typeof Number(id))
     })
 
     const getProductById = async (req, res) => {
